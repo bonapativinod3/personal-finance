@@ -1,20 +1,43 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Smart Finance Companion
 
-# Run and deploy your AI Studio app
+A modern personal finance management application built with React, Vite, and Tailwind CSS.
 
-This contains everything you need to run your app locally.
+## Features
 
-View your app in AI Studio: https://ai.studio/apps/adb3f5d8-a237-4bb2-a447-373f626ff81f
+- **Dashboard**: Overview of balance, income, and expenses.
+- **AI Chatbot**: Financial advice powered by Google Gemini.
+- **Calendar View**: Track daily spending with color-coded indicators.
+- **Fixed Deposit Calculator**: Plan your investments with ease.
+- **Transaction Management**: Search, filter, and manage your expenses.
 
-## Run Locally
+## Deployment to Vercel
 
-**Prerequisites:**  Node.js
+This project is ready to be deployed to Vercel.
 
+### Steps to Deploy
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+1.  **Push to GitHub**: Push your code to a GitHub repository.
+2.  **Import to Vercel**:
+    -   Go to [Vercel Dashboard](https://vercel.com/dashboard).
+    -   Click **Add New...** -> **Project**.
+    -   Import your GitHub repository.
+3.  **Configure Environment Variables**:
+    -   In the **Environment Variables** section of the Vercel project setup, add:
+        -   `GEMINI_API_KEY`: Your Google Gemini API key.
+4.  **Deploy**: Click **Deploy**. Vercel will automatically detect the Vite project and build it.
+
+### Client-Side Routing
+
+The `vercel.json` file is included to handle client-side routing (rewrites), ensuring that refreshing the page on any route (like `/calendar`) works correctly.
+
+## Local Development
+
+1.  Install dependencies:
+    ```bash
+    npm install
+    ```
+2.  Create a `.env` file and add your `GEMINI_API_KEY`.
+3.  Start the development server:
+    ```bash
+    npm run dev
+    ```
